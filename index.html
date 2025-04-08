@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Restaurantes</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" href="images/icon-192x192.png">
+    <meta name="theme-color" content="#f0f0f0">
+</head>
+<body>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-top">
+                <div class="user-actions">
+                    <a href="#">Registrarse</a>
+                    <a href="#">Iniciar Sesión</a>
+                </div>
+                <h1 class="logo">
+                    <a href="./">Fitness</a>
+                </h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">Body</a></li>
+                    <li><a href="#">Calculadora de Mr</a></li>
+                    <li><a href="#">Calcudora de Rm</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="main-area">
+            <main class="main-content">
+                <section id="featuredRestaurannts" class="featured-section scrolling-section">
+                    <h2>Entrenamiento Programados (En Gymnasio)</h2>
+                    <div class="restaurant-list horizontal-scroll">
+                        </div>
+                </section>
+                <section id="featuredRestaurantss" class="featured-section scrolling-section">
+                    <h2>Entrenamiento Programados (En Casa)</h2>
+                    <div class="restaurant-list horizontal-scroll">
+                        </div>
+                </section>
+                <section id="featuredRestaurants" class="featured-section scrolling-section">
+                    <h2>Crear Rutina</h2>
+                    <div class="restaurant-list horizontal-scroll">
+                        </div>
+            </main>
+
+            <aside class="sidebar">
+                <section id="mapSection" class="map-section">
+                    <h2>Calendario</h2>
+                    <div class="map-container">
+                        <p>Mapa de restaurantes cercanos (placeholder)</p>
+                    </div>
+                </section>
+
+                
+                <section id="mapSection" class="map-section">
+                    <h2>Rutina de hoy</h2>
+                </section>
+            </aside>
+        </div>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Buscador de Restaurantes</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
+        }
+    </script>
+</body>
+</html>
