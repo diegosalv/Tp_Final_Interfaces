@@ -1,7 +1,7 @@
 {
-    "name": "Buscador de Restaurantes",
-    "short_name": "Restaurantes",
-    "start_url": "/",
+    "name": "Entrenamiento fit",
+    "short_name": "FitApp",
+    "start_url": "./index.html",
     "display": "standalone",
     "background_color": "#f0f0f0",
     "theme_color": "#f0f0f0",
