@@ -4,11 +4,11 @@ if (workbox) {
   console.log("✅ Workbox cargado correctamente");
 
   workbox.precaching.precacheAndRoute([
-    { url: '/Tp_Final_Interfaces/índice.html', revision: '1' },
-    { url: '/Tp_Final_Interfaces/manifesto.json', revision: '1' },
-    { url: '/Tp_Final_Interfaces/fuente/css/estilos.css', revision: '1' },
-    { url: '/Tp_Final_Interfaces/images/icon-192x192.png', revision: '1' },
-    { url: '/Tp_Final_Interfaces/images/icon-512x512.png', revision: '1' },
+     { url: '/index.html', revision: '1' },
+  { url: '/manifest.json', revision: '1' },
+  { url: '/src/css/estilo.css', revision: '1' },
+  { url: '/src/css/normalizar.css', revision: '1' },
+  
   ]);
 
   workbox.routing.registerRoute(
@@ -28,3 +28,4 @@ if (workbox) {
 } else {
   console.log("❌ Error al cargar Workbox");
 }
+//asdnjasndjasndjnas//
