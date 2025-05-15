@@ -1,11 +1,11 @@
-/* Estilos base (mantén los anteriores) */
+/* Estilos base */
 body {
     font-family: sans-serif;
     margin: 0;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    position: relative; /* Necesario para que el posicionamiento absoluto de los hijos sea relativo a body */
+    position: relative;
 }
 
 .container {
@@ -21,12 +21,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; /* Para que .user-actions se posicione relativamente a él si fuera necesario */
+    position: relative;
 }
 
 .header-top {
     display: flex;
-    justify-content: center; /* Centramos el logo aquí */
+    justify-content: center;
     align-items: center;
     width: 100%;
     margin-bottom: 15px;
@@ -35,11 +35,11 @@ body {
 .user-actions {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Alineamos los enlaces a la derecha dentro de su contenedor */
-    position: absolute; /* Lo sacamos del flujo normal del documento */
-    top: 10px; /* Ajusta la distancia desde la parte superior */
-    right: 20px; /* Ajusta la distancia desde la derecha */
-    z-index: 10; /* Asegura que esté por encima de otros elementos si es necesario */
+    align-items: flex-end;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 10;
 }
 
 .user-actions a {
@@ -55,21 +55,19 @@ body {
 }
 
 .logo a {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: inherit; /* Hereda el color del elemento padre (.logo) */
-    display: block; /* Hace que el enlace ocupe todo el espacio del h1 para que sea fácil hacer clic */
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .logo a:hover {
-    /* Puedes agregar un efecto hover si lo deseas, por ejemplo: */
     color: #e45757;
 }
 
 .logo {
     color: #ff6b6b;
-    margin-bottom: 0; /* Reducimos el margen inferior aquí */
+    margin-bottom: 0;
     text-align: center;
-    /* flex-grow: 1; Ya no es necesario aquí */
 }
 
 .search-container {
@@ -106,7 +104,7 @@ button:hover {
     background-color: #f9f9f9;
     padding: 10px 20px;
     border-radius: 5px;
-    width: 100%; /* Ocupa todo el ancho para centrarse */
+    width: 100%;
 }
 
 .main-nav ul {
@@ -131,16 +129,16 @@ button:hover {
 
 .main-area {
     display: flex;
-    flex-grow: 1; /* Para que ocupe el espacio restante */
+    flex-grow: 1;
     padding: 20px;
     gap: 20px;
 }
 
 .main-content {
-    flex-grow: 2; /* Ocupa más espacio que la barra lateral */
-    display: flex; /* Para organizar las secciones verticalmente */
+    flex-grow: 2;
+    display: flex;
     flex-direction: column;
-    gap: 20px; /* Espacio entre las secciones del contenido principal */
+    gap: 20px;
 }
 
 .scrolling-section {
@@ -153,24 +151,24 @@ button:hover {
 .horizontal-scroll {
     display: flex;
     gap: 20px;
-    overflow-x: auto; /* Permite el scroll horizontal */
-    padding-bottom: 15px; /* Espacio para la barra de scroll */
+    overflow-x: auto;
+    padding-bottom: 15px;
 }
 
 .horizontal-scroll .restaurant-card {
-    flex: 0 0 auto; /* No se encoge ni se estira, tamaño automático */
-    width: 300px; /* Ancho de cada tarjeta destacada */
+    flex: 0 0 auto;
+    width: 300px;
 }
 
 .sidebar {
-    flex-basis: 300px; /* Ancho fijo inicial para la barra lateral */
+    flex-basis: 300px;
     background-color: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky; /* Fija la barra lateral */
-    top: 20px; /* Espacio desde la parte superior */
-    height: fit-content; /* Ajusta la altura al contenido */
+    position: sticky;
+    top: 20px;
+    height: fit-content;
 }
 
 .sidebar h2 {
@@ -178,7 +176,7 @@ button:hover {
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
     margin-bottom: 15px;
-    font-size: 1.2em; /* Reduce el tamaño del título en la barra lateral */
+    font-size: 1.2em;
 }
 
 .featured-section,
@@ -195,7 +193,7 @@ button:hover {
 
 .sidebar .featured-section,
 .sidebar .cuisines-section {
-    display: none; /* Oculta estas secciones en la barra lateral por ahora */
+    display: none;
 }
 
 .map-section,
@@ -208,8 +206,7 @@ button:hover {
 }
 
 .map-container {
-    /* Estilos para el contenedor del mapa (podrías usar un iframe aquí) */
-    min-height: 200px; /* Altura mínima para el mapa placeholder */
+    min-height: 200px;
     background-color: #eee;
     border-radius: 5px;
     display: flex;
@@ -282,11 +279,11 @@ h2 {
 }
 
 .restaurant-list li {
-    padding: 10px 0; /* Reduce el padding vertical en la barra lateral */
+    padding: 10px 0;
     border-bottom: 1px solid #eee;
     display: flex;
     align-items: center;
-    gap: 10px; /* Reduce el espacio entre imagen y texto */
+    gap: 10px;
 }
 
 .restaurant-list li:last-child {
@@ -294,7 +291,7 @@ h2 {
 }
 
 .restaurant-list img {
-    width: 40px; /* Reduce el tamaño de la imagen en la barra lateral */
+    width: 40px;
     height: 40px;
     border-radius: 5px;
     object-fit: cover;
@@ -332,111 +329,169 @@ h2 {
     margin-top: 30px;
     border-top: 1px solid #eee;
 }
-/* Estilos para celulares (hasta 600px de ancho) */
-@media (max-width: 600px) {
+
+/* Estilos calculadora */
+.calculator-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.calculator-form {
+    flex: 1 1 320px;
+    max-width: 400px;
+    background: #fff;
+    padding: 24px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.calculator-form h2 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#mrForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#mrForm label {
+    margin-bottom: 2px;
+}
+
+#mrForm input,
+#mrForm select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#mrForm button {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background: #ff7b7b;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.resultado {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.calculator-info {
+    flex: 1 1 260px;
+    max-width: 350px;
+    background: #f8f8f8;
+    padding: 24px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.calculator-info h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+/* --- MEDIA QUERIES RESPONSIVAS COMBINADAS --- */
+@media (max-width: 768px) {
     .main-area {
         flex-direction: column;
         padding: 10px;
     }
-
     .sidebar {
         width: 100%;
         margin-top: 20px;
         position: static;
         padding: 15px;
     }
-
     .main-header {
         padding: 10px 15px;
-        align-items: stretch;
     }
-
     .header-top {
+        margin-bottom: 10px;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 10px;
     }
-
     .user-actions {
         position: static;
-        align-items: center;
         margin-bottom: 10px;
+        align-items: center;
     }
-
     .user-actions a {
         margin-left: 0;
         margin-bottom: 5px;
         font-size: 1em;
     }
-
     .logo {
         margin-bottom: 10px;
         font-size: 1.5em;
     }
-
     .search-container {
-        flex-direction: column; /* Volvemos a apilar en celulares */
-        align-items: stretch;
         margin-bottom: 15px;
+        flex-direction: column;
+        align-items: stretch;
         display: flex;
     }
-
     input[type="text"] {
         padding: 10px;
         border-radius: 5px;
         margin-bottom: 5px;
         flex-grow: 1;
-        margin-right: 0; /* Removemos el margen derecho */
+        margin-right: 0;
         font-size: 1em;
     }
-
     button {
         padding: 10px 15px;
         border-radius: 5px;
         font-size: 1em;
         flex-shrink: 0;
     }
-
     .main-nav {
         padding: 10px;
         border-radius: 0;
     }
-
     .main-nav ul {
-        flex-direction: column; /* Volvemos a apilar en celulares */
-        align-items: stretch;
+        flex-direction: column;
+        align-items: center;
         gap: 5px;
+        justify-content: center;
+        padding: 0;
     }
-
     .main-nav ul li {
-        margin: 0;
+        width: 100%;
+        text-align: center;
     }
-
     .main-nav ul li a {
+        display: block;
+        width: 100%;
         padding: 10px;
         text-align: center;
         border-bottom: 1px solid #eee;
-        border-radius: 0; /* Removemos el borde redondeado */
-        background-color: transparent; /* Fondo transparente */
+        border-radius: 0;
+        background-color: transparent;
         color: #333;
         font-size: 1em;
     }
-
     .main-nav ul li a:hover {
         background-color: #ddd;
         color: #ff6b6b;
     }
-
     .horizontal-scroll {
-        justify-content: flex-start;
         padding-left: 10px;
         padding-right: 10px;
     }
-
     .horizontal-scroll .restaurant-card {
-        width: 200px; /* Reducimos aún más en celulares */
+        width: 200px;
     }
-
     .map-section,
     .promotions-section,
     .quick-filters-section,
@@ -449,196 +504,47 @@ h2 {
         padding: 15px;
         margin-bottom: 15px;
     }
-
     h2, .sidebar h2 {
         font-size: 1.1em;
         margin-bottom: 10px;
         padding-bottom: 8px;
     }
-
     .restaurant-list li {
         font-size: 0.9em;
         padding: 8px 0;
         gap: 8px;
     }
-
     .restaurant-list img {
         width: 30px;
         height: 30px;
     }
-
     .cuisine-list {
         justify-content: flex-start;
     }
-
     .cuisine-item {
         font-size: 0.85em;
         padding: 6px 10px;
     }
-
     .map-container {
         min-height: 150px;
     }
-
     .promotions-list li {
         font-size: 0.9em;
         padding: 8px 0;
     }
-}
-/* Media Queries para Responsividad */
-/* Estilos para tablets (desde 601px hasta 768px de ancho) */
-@media (min-width: 601px) and (max-width: 768px) {
-    .main-area {
-        flex-direction: column; /* Apila el contenido principal y la barra lateral */
-        padding: 10px;
+    /* Calculadora responsive */
+    .calculator-flex {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
     }
-
-    .sidebar {
+    .calculator-info, .calculator-form {
+        max-width: 95vw;
         width: 100%;
-        margin-top: 20px;
-        position: static;
-        padding: 15px;
+        box-sizing: border-box;
     }
-
-    .main-header {
-        padding: 10px 15px;
-        align-items: center; /* Centramos los elementos del header */
-    }
-
-    .header-top {
-        flex-direction: row; /* Volvemos a la fila para logo y acciones */
-        align-items: center;
-        justify-content: space-between; /* Espacio entre logo y acciones */
-        margin-bottom: 15px;
-    }
-
-    .user-actions {
-        position: static; /* Vuelve al flujo normal */
-        align-items: flex-end; /* Alinear a la derecha */
+    .calculator-info {
         margin-bottom: 0;
-    }
-
-    .user-actions a {
-        margin-left: 10px; /* Espacio entre enlaces */
-        margin-bottom: 0;
-        font-size: 1em;
-    }
-
-    .logo {
-        margin-bottom: 0;
-        font-size: 1.8em; /* Un poco más grande que en móviles */
-    }
-
-    .search-container {
-        flex-direction: row; /* Input y botón en línea */
-        align-items: center;
-        margin-bottom: 20px;
-        display: flex;
-    }
-
-    input[type="text"] {
-        padding: 10px;
-        border-radius: 5px;
-        margin-bottom: 0;
-        flex-grow: 1;
-        margin-right: 10px;
-        font-size: 1em;
-    }
-
-    button {
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-size: 1em;
-        flex-shrink: 0;
-    }
-
-    .main-nav {
-        padding: 10px;
-        border-radius: 0;
-    }
-
-    .main-nav ul {
-        flex-direction: row; /* Barra de navegación en una línea */
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-
-    .main-nav ul li {
-        margin: 0;
-    }
-
-    .main-nav ul li a {
-        padding: 10px 15px;
-        text-align: center;
-        border-bottom: none;
-        border-radius: 5px;
-        background-color: #eee;
-        color: #333;
-        font-size: 1em;
-    }
-
-    .main-nav ul li a:hover {
-        background-color: #ddd;
-        color: #ff6b6b;
-    }
-
-    .horizontal-scroll {
-        justify-content: flex-start;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .horizontal-scroll .restaurant-card {
-        width: 280px; /* Un poco más grande que en móviles */
-    }
-
-    .map-section,
-    .promotions-section,
-    .quick-filters-section,
-    .sort-by-section,
-    .featured-section,
-    .cuisines-section,
-    .recently-viewed-section,
-    .popular-locations-section,
-    .top-rated-section {
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    h2, .sidebar h2 {
-        font-size: 1.2em;
-        margin-bottom: 10px;
-        padding-bottom: 8px;
-    }
-
-    .restaurant-list li {
-        font-size: 1em;
-        padding: 8px 0;
-        gap: 10px;
-    }
-
-    .restaurant-list img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .cuisine-list {
-        justify-content: center; /* Centramos en tablets */
-    }
-
-    .cuisine-item {
-        font-size: 0.9em;
-        padding: 8px 12px;
-    }
-
-    .map-container {
-        min-height: 200px;
-    }
-
-    .promotions-list li {
-        font-size: 1em;
-        padding: 10px 0;
+        margin-top: 16px;
     }
 }
