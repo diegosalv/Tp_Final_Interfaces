@@ -5,8 +5,8 @@ if (workbox) {
 
   workbox.precaching.precacheAndRoute([
      { url: '/index.html', revision: '1' },
-  { url: '/src/css/estilo.css', revision: '1' },
-  { url: '/src/css/normalizar.css', revision: '1' },
+  { url: '/src/css/style.css', revision: '1' },
+  { url: '/src/css/normalize.css', revision: '1' },
   
   ]);
 
