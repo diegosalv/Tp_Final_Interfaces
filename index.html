@@ -16,8 +16,8 @@
         <header class="main-header">
             <div class="header-top">
                 <div class="user-actions">
-                    <a href="#">Registrarse</a>
-                    <a href="#">Iniciar Sesión</a>
+                <a href="#" onclick="toggleModal('registro')">Registrarse</a>
+                <a href="#" onclick="toggleModal('login')">Iniciar Sesión</a>
                 </div>
                 <h1 class="logo">
                     <a href="./">Fitness</a>
@@ -57,6 +57,29 @@
                         <p>Mapa de restaurantes cercanos (placeholder)</p>
                     </div>
                 </section>
+  <!-- Formulario de Inicio de Sesión -->
+<section id="login" class="modal-form">
+  <span class="close-btn" onclick="toggleModal()">&times;</span>
+  <h2>Iniciar Sesión</h2>
+  <form id="formLogin">
+    <input type="text" id="loginUsername" placeholder="Usuario" required>
+    <input type="password" id="loginPassword" placeholder="Contraseña" required>
+    <button type="submit">Entrar</button>
+  </form>
+  <div id="loginMsg"></div>
+</section>
+
+<!-- Formulario de Registro -->
+<section id="registro" class="modal-form">
+  <span class="close-btn" onclick="toggleModal()">&times;</span>
+  <h2>Registrarse</h2>
+  <form id="formRegistro">
+    <input type="text" id="regUsername" placeholder="Usuario" required>
+    <input type="password" id="regPassword" placeholder="Contraseña" required>
+    <button type="submit">Crear cuenta</button>
+  </form>
+  <div id="registroMsg"></div>
+</section>
 
                 
                 <section id="mapSection" class="map-section">
@@ -77,6 +100,23 @@
       .then(reg => console.log("✅ Service Worker registrado:", reg.scope))
       .catch(err => console.error("❌ Error al registrar el Service Worker:", err));
   }
+</script>
+<script>
+function toggleModal(id) {
+  document.getElementById('login').classList.remove('active');
+  document.getElementById('registro').classList.remove('active');
+  if (id) document.getElementById(id).classList.add('active');
+}
+
+// Cierra el modal después de enviar el formulario de registro
+document.getElementById('formRegistro').addEventListener('submit', function(e) {
+  setTimeout(() => toggleModal(), 500); // Da tiempo a mostrar el mensaje
+});
+
+// Cierra el modal después de enviar el formulario de login
+document.getElementById('formLogin').addEventListener('submit', function(e) {
+  setTimeout(() => toggleModal(), 500); // Da tiempo a mostrar el mensaje
+});
 </script>
 </body>
 </html>

@@ -1000,3 +1000,27 @@ h2 {
     box-shadow: 0 2px 8px #0001;
 }
 
+.modal-form {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+  border: 2px solid #333;
+  padding: 2em;
+  z-index: 1000;
+  box-shadow: 0 0 10px #0003;
+}
+.modal-form.active {
+  display: block;
+}
+.close-btn {
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  color: #c00;
+}
+.modal-form { display: none; /* ... */ }
+.modal-form.active { display: block; }
+.close-btn { /* ... */ }
