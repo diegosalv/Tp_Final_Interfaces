@@ -80,6 +80,39 @@
   </form>
   <div id="registroMsg"></div>
 </section>
+<script>
+// Registro de usuario
+document.getElementById('formRegistro').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const username = document.getElementById('regUsername').value;
+  const password = document.getElementById('regPassword').value;
+
+  const res = await fetch('backend/register.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({username, password})
+  });
+  const data = await res.json();
+  document.getElementById('registroMsg').textContent = data.status === 'success' ? 'Usuario creado' : data.message;
+  setTimeout(() => toggleModal(), 1000);
+});
+
+// Login de usuario
+document.getElementById('formLogin').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const username = document.getElementById('loginUsername').value;
+  const password = document.getElementById('loginPassword').value;
+
+  const res = await fetch('backend/login.php', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({username, password})
+  });
+  const data = await res.json();
+  document.getElementById('loginMsg').textContent = data.status === 'success' ? 'Bienvenido' : data.message;
+  setTimeout(() => toggleModal(), 1000);
+});
+</script>
 
                 
                 <section id="mapSection" class="map-section">
@@ -107,16 +140,6 @@ function toggleModal(id) {
   document.getElementById('registro').classList.remove('active');
   if (id) document.getElementById(id).classList.add('active');
 }
-
-// Cierra el modal después de enviar el formulario de registro
-document.getElementById('formRegistro').addEventListener('submit', function(e) {
-  setTimeout(() => toggleModal(), 500); // Da tiempo a mostrar el mensaje
-});
-
-// Cierra el modal después de enviar el formulario de login
-document.getElementById('formLogin').addEventListener('submit', function(e) {
-  setTimeout(() => toggleModal(), 500); // Da tiempo a mostrar el mensaje
-});
 </script>
 </body>
 </html>
