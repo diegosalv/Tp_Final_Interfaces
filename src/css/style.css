@@ -1021,6 +1021,3 @@ h2 {
   font-weight: bold;
   color: #c00;
 }
-.modal-form { display: none; /* ... */ }
-.modal-form.active { display: block; }
-.close-btn { /* ... */ }
